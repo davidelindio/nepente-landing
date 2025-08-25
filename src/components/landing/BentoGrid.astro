@@ -1,0 +1,24 @@
+---
+import {Image} from "astro:assets"
+import logoBento from "../img/logo.svg"
+import LinkedInIcon from "../icons/LinkedIn.astro"
+import Instagram from "../icons/Instagram.astro"
+import WhatsApp from "../icons/WhatsApp.astro"
+interface Props {
+    styles?:string;
+}
+const {styles}=Astro.props;
+
+---
+<div class="text-center bg-black w-full h-screen grid grid-cols-3 grid-rows-4 gap-1">
+<div class="bg-amber-50 row-span-2 rounded-2xl">01</div>
+<div class="bg-amber-50">02</div>
+<div class="bg-amber-50">03</div>
+<div class="bg-amber-50 col-span-2">04</div>
+<div class="bg-amber-50 col-span-2">05</div>
+<div class="bg-amber-50">06</div>
+<div class="bg-amber-50 col-span-3">07</div>
+
+
+
+</div>

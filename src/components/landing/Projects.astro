@@ -1,0 +1,50 @@
+---
+import { string } from "astro:schema";
+import projects from "../../config/projects.json";
+import Article1 from "../../components/img/undraw_artist-at-work_yos7.png"
+import Article2 from "../../components/img/undraw_exams_d2tf.png"
+import Article3 from "../../components/img/undraw_art-museum_pqfw.png"
+import Image from "astro/components/Image.astro";
+interface Article {
+    number:string;
+    title:string;
+    description:string;
+    img: ImageMetadata;
+}
+const articles: Article[]=[
+    {
+        number:"01",
+        title: "Cosa1",
+        description:"Descripción de la cosa1",
+        img: Article1,
+    },
+      {
+        number:"02",
+        title: "Cosa2",
+        description:"Descripción de la cosa1",
+        img: Article2,
+    },
+      {
+        number:"03",
+        title: "Cosa3",
+        description:"Descripción de la cosa1",
+        img: Article3 ,
+    }
+]
+---
+<section class="flex flex-col lg:flex-row">
+    {
+ articles.map((article : Article) => (
+<article class="flex mb-8 gap-8 ">
+    <Image class="w-[100px]" src={article.img} alt={article.title}/>
+    <div>
+        <p class="text-[2rem] font-bold text-Soft-orange">{article.number}</p>
+        <a class="font-extrabold text-lg cursor-pointer hover:text-Soft-red" href="#">{article.title}</a>
+        <p class="text-Dark-grayish-blue text-[0.9375rem]">{article.description}</p>
+    </div>
+</article>
+    ))
+
+    }
+   </section>
+

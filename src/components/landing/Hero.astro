@@ -1,0 +1,46 @@
+---
+import Badge from "../Badge.astro";
+import { Image } from "astro:assets";
+import HeroImg from "../img/arte.svg";
+import mobileImg from "../img/mujer.jpg";
+import desktopImg from "../img/mujer.jpg";
+interface Props {
+    styles?: string;
+}
+const { styles } = Astro.props;
+---
+
+<header class={` mb-6 ${styles}`}>
+    <div class=" mb-6 flex items-center gap-4">
+        <Image
+            class="-z-10 mask-radial-[100%_100%] mask-radial-from-75% mask-radial-at-left object-cover sm:hidden"
+            src={mobileImg}
+            alt="Hero de Nepente"
+        />
+        <Image
+            class="-z-10 hidden mask-radial-from-100% mask-radial-farthest-side mask-radial-at-[30%_30%] sm:block"
+            src={desktopImg}
+            alt="Hero de Nepente"
+        />
+    </div>
+
+    <div class="-mt-93 ml-50 flex flex-col items-start xl:flex-row">
+        <h1
+            class=" text-Secundario text- mt-3 mb-6 text-TC/10 font-extrabold text-balance xl:mb-0 xl:flex-1 xl:text-[6rem]/14"
+        >
+            Nepente
+        </h1>
+        <div class=" xl:mt-5 xl:flex-1 xl:pl-8">
+            <h2
+                class="mt-2 text-Primario font-medium mb-8 text-[1.25rem] text-balance"
+            >
+                Imprimí tus momentos
+            </h2>
+            <p class="text-black"></p>
+            <button
+                class=" bg-Terciario text-white rounded-3xl hover:bg-Primario/90 mb-6 cursor-pointer px-8 py-3 font-bold"
+                >Comenzá</button
+            >
+        </div>
+    </div>
+</header>

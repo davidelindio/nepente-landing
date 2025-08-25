@@ -1,0 +1,33 @@
+---
+import LinkedInIcon from "./icons/LinkedIn.astro"
+import Instagram from "./icons/Instagram.astro"
+import WhatsApp from "./icons/WhatsApp.astro"
+interface Props {
+    styles?:string;
+}
+const {styles}=Astro.props;
+---
+<footer class= "mt-34 bg-Primario   py-4 ">
+<div class="container mx-auto flex flex-col md:flex-row justify-evenly text-center md:text-left gap-4">
+        <div class="flex items-center mb-6">
+        <h4 class="font-bold text-xl">Site map</h4>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/pricing">Pricing</a>
+    </div>
+    <div class="align-baseline">
+        <h4 class="font-bold"> Site map</h4>
+        <p>Todos los derechos reservados</p>
+        <p>Política de privacidad</p>
+        <p>Política de manejo de datos</p>
+    </div>
+    <div class="text-xl">
+        <h4>Social links</h4>
+        
+        <a href="/"> <LinkedInIcon class="size-6"/>LinkedIn</a>
+        <a href="/">  <Instagram class="size-6"/> Instagram</a>
+        
+
+    </div>
+</div>
+</footer>

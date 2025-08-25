@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+
+
+@theme {
+  --color-Fondo:#3b3e3e;
+  --color-Primario: hsl(35, 77%, 62%);
+  --color-Secundario: hsl(5, 85%, 63%);
+  --color-Terciario: hsl(240, 100%, 5%);
+  --color-Neutral:hsl(233, 8%, 79%);
+
+  --text-TD: 3.5rem;
+  --text-TM: 3rem;
+  --text-SD: 2.5rem;
+  --text-SM: 2rem;
+  --text-PD: 2.25rem;
+  --text-PM: 1.25rem;
+  --texto-R: 1rem;
+}
+

@@ -1,0 +1,37 @@
+---
+interface More{
+    title: string;
+    description: string;
+}
+const articles: More[]=[
+    {
+        title: "Cotizá",
+        description:"Todo lo que hay que imprimir"
+    },
+    {
+        title: "Revisá",
+        description:"Todo lo que hay que imprimir en A3"
+    },
+    {
+        title: "Retirá tus fotos",
+        description:"Todo lo que hay que imprimir en Oficio"
+    }
+    
+]
+interface Props {
+    styles?:string;
+}
+const {styles}=Astro.props;
+---
+<section class= {`mb-16 ${styles} bg-Neutral text-black py-4 px-6`}>
+   <h1 class="text-Soft-orange font-bold text-[2rem]">Cómo imprimir</h1>
+   {
+    articles.map((article : More) =>(
+        <article class="border-b border-white py-8 last:border-none">
+        <a href="#" class="font-extrabold text-xl inline-block mb-2 cursor-pointer hover:text-Soft-orange">{article.title}</a>
+        <p class="text-Grayish-blue text-[0.9375rem]">{article.description}</p>
+        </article>   
+    ))
+   }
+
+</section>

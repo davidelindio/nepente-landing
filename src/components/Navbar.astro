@@ -1,0 +1,40 @@
+---
+import Logo from "../components/img/favicon.svg"
+import IconClose from "../components/img/icon-menu-close.svg"
+import IconOpen from "../components/img/icon-menu.svg"
+import NavBarItems from "./landing/NavBarItems.astro"
+---
+
+ <nav class=" flex justify-between  mb-6" >
+    <Logo class="size-12"/>
+    <NavBarItems isHorizontal={true} />
+    <IconOpen id="open-btn" class="cursor-pointer lg:hidden"/>
+    <div id="menu-modal" class="bg-black/50 fixed inset-0 hidden">
+        <div class="bg-white absolute text-Principal right-0 h-screen flex flex-col items-end px-[21px] py-[27px]">
+        <IconClose id="close-btn" class="cursor-pointer"/>
+              <NavBarItems/>
+    </div>
+    </div>
+
+</nav>
+<script>
+
+    const closeBtn = document.getElementById("close-btn");
+    const modal = document.getElementById("menu-modal");
+    const openBtn = document.getElementById("open-btn");
+    const menuItems = document.querySelectorAll("a");
+    //const navItem = [...menuItems];
+    
+    closeBtn?.addEventListener('click', ()=>{
+        modal?.classList.add("hidden")
+    })
+    openBtn?.addEventListener('click', ()=>{
+        modal?.classList.remove("hidden")
+    })
+
+    menuItems.forEach((item : HTMLAnchorElement) => {
+        item.addEventListener('click', ()=>{
+            modal?.classList.add("hidden");
+        })
+    })
+</script>
