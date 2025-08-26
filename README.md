@@ -1,3 +1,6 @@
+#Captura de pantalla del sitio
+<img width="1136" height="616" alt="Captura de pantalla 2025-08-25 192611" src="https://github.com/user-attachments/assets/ec476970-eb38-4a1c-a207-0ea5d51129cc" />
+
 # Astro Starter Kit: Minimal
 
 ```sh
